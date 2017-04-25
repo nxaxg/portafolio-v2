@@ -2,35 +2,51 @@
 //rem = 16px
 body{
     font-family: $base_content_font;
+    font-size: 16px;
 }
-
+.container{
+    padding: 0;
+}
 .overlay{
     position: relative;
-    height: 100vh;
-    &__back{
-        z-index: 1;
-        background: url('../images/mid-back-2.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    &-home{
+        height: 100vh;
+        &__back{
+            z-index: 1;
+            background: url('../images/mid-back-2.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        &__body{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-project{
+        height: 450px;
+        top: 50px;
+        overflow: hidden;
+        &__back{
+            z-index: -1;
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        &__body{
+            width: 100%;
+            padding: 5% 0;
+        }
     }
     &__body{
         position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
-        z-index: 1;
+        z-index: 2;
         background: rgba($color_black,0.5);
         color: $color_white;
-    }
-}
-
-.main-home{
-    &__body{
-        padding: 8rem 0;
     }
 }
 
@@ -65,8 +81,16 @@ body{
         font-weight: $weight_bold;
         text-transform: uppercase;
     }
+    &-home{
+        &__body{
+            padding: 8rem 0;
+        }
+    }
 }
+
 .horizon{
+    position: relative;
+    overflow: hidden;
     padding: 4rem 0;
     font-family: $base_content_font;
     &--white{
@@ -79,13 +103,134 @@ body{
     }
 }
 
+.icons{
+    &-gold{
+        color: dimgray;
+    }
+    &-box{
+        width: 60%;
+        margin: 0 20%;
+        padding: 2rem;
+        &__list{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            &--right{
+                justify-content: flex-end;
+            }
+            &--medium{
+                .icons-box__item--circled{
+                    .icons-box__link{
+                        font-size: 2.5rem;
+                        padding: 2rem;
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+        }
+        &__item{
+            &--circled{
+                margin-right: 2rem;
+                .icons-box__link{
+                    color: white;
+                    font-size: 2rem;
+                    padding: 2rem;
+                    width: 5rem;
+                    height: 5rem;
+                    border: 1px solid gold;
+                    border-radius: 50%;
+                    @include flex-center;
+                    @include ease-transition(.2s);
+                    &:hover{
+                        text-decoration: none;
+                        color: gold;
+                        border: 1px solid transparent;
+                        @include scale-transform(1.4);
+                        @include ease-transition(.5s);
+                    }
+                    &:active,
+                    &:visited,
+                    &:focus{
+                        text-decoration: none;
+                        outline: none;
+                    }
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.tags-box{
+    padding: 2rem;
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+    &__item{
+        margin-right: 1rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__link{
+        color: white;
+        padding: .5rem 1rem;
+        border: 1px solid gold;
+        @include flex-center;
+        @include ease-transition(.2s);
+        &:hover{
+            border: 1px solid transparent;
+            text-decoration: none;
+            color: gold;
+            @include ease-transition(.5s);
+        }
+        &:active,
+        &:visited,
+        &:focus{
+            text-decoration: none;
+            outline: none;
+        }
+    }
+}
+
+.project{
+    &-sidebar{
+        padding: 1rem;
+        border: 1px solid gold;
+        &__title{
+            margin: 0;
+            padding: 1rem 0;
+        }
+    }
+    &-content{
+        border: 1px solid gold;
+        padding: 1rem 2rem;
+        padding-top: 0;
+    }
+}
+
 .footer-bar{
     background: black;
     width: 100%;
     padding: 1rem;
     color: white;
-}
-.horizon{
-    position: relative;
-    overflow: hidden;
+    z-index: 10;
+    .row{
+        display: flex;
+        align-items: center;
+    }
+    &__copyright{
+        margin: 0;
+    }
 }

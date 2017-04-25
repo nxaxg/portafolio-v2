@@ -211,81 +211,26 @@ $medias_map: (
 	huge: $huge
 );
 
-////////////////////////////////////////
-//////////////////////////////////////// Icons
-////////////////////////////////////////
+///////
+@mixin ease-transition($secs){
+	-webkit-transition: ease $secs;
+    -ms-transition: ease $secs;
+	-moz-transition: ease $secs;
+    transition: ease $secs;
+}
 
-$icon-add_circle: "\e900";
-$icon-add: "\e901";
-$icon-arrow_circle_down: "\e902";
-$icon-arrow_circle_left: "\e903";
-$icon-arrow_circle_right: "\e904";
-$icon-arrow_circle_up: "\e905";
-$icon-arrow_drop_left: "\e906";
-$icon-arrow_drop_right: "\e907";
-$icon-arrow_drop_up: "\e908";
-$icon-check: "\e909";
-$icon-chevron_down: "\e90a";
-$icon-chevron_up: "\e90b";
-$icon-content_cut: "\e90c";
-$icon-content_paste: "\e90d";
-$icon-delete: "\e90e";
-$icon-edit: "\e90f";
-$icon-error: "\e910";
-$icon-fullscreen_exit: "\e911";
-$icon-fullscreen: "\e912";
-$icon-instagram: "\e913";
-$icon-menu: "\e914";
-$icon-more_horiz: "\e915";
-$icon-more_vert: "\e916";
-$icon-pause: "\e917";
-$icon-refresh: "\e918";
-$icon-remove_circle: "\e919";
-$icon-remove: "\e91a";
-$icon-save: "\e91b";
-$icon-warning: "\e91c";
-$icon-account_child: "\e91d";
-$icon-arrow_drop_down: "\e91e";
-$icon-attach_money: "\e91f";
-$icon-calendar: "\e920";
-$icon-call: "\e921";
-$icon-chevron_left: "\e922";
-$icon-chevron_right: "\e923";
-$icon-close: "\e924";
-$icon-collections: "\e925";
-$icon-content_copy: "\e926";
-$icon-email: "\e927";
-$icon-facebook: "\e928";
-$icon-googleplus: "\e929";
-$icon-heart: "\e92a";
-$icon-link: "\e92b";
-$icon-linkedin: "\e92c";
-$icon-loader: "\e92d";
-$icon-local_offer: "\e92e";
-$icon-notifications: "\e92f";
-$icon-perm_identity: "\e930";
-$icon-phone_iphone: "\e931";
-$icon-place: "\e932";
-$icon-play_arrow: "\e933";
-$icon-schedule: "\e934";
-$icon-search: "\e935";
-$icon-select: "\e936";
-$icon-settings: "\e937";
-$icon-share: "\e938";
-$icon-star: "\e939";
-$icon-twitter: "\e93a";
-$icon-video_collection: "\e93b";
-$icon-youtube: "\e93c";
+@mixin scale-transform($howmuch){
+	-webkit-transform: scale($howmuch);
+    -ms-transform: scale($howmuch);
+	-moz-transform: scale($howmuch);
+    transform: scale($howmuch);
+}
 
-$social_icons_map: (
-	facebook: $icon-facebook,
-	twitter: $icon-twitter,
-	googleplus: $icon-googleplus,
-	linkedin: $icon-linkedin,
-	youtube: $icon-youtube,
-	instagram: $icon-instagram,
-	shortlink: $icon-link,
-);
+@mixin flex-center{
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
 
 
 ////////////////////////////////////////
