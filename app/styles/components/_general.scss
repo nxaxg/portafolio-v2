@@ -111,27 +111,6 @@ body{
         width: 60%;
         margin: 0 20%;
         padding: 2rem;
-        &__list{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            padding: 0;
-            margin: 0;
-            &--right{
-                justify-content: flex-end;
-            }
-            &--medium{
-                .icons-box__item--circled{
-                    .icons-box__link{
-                        font-size: 2.5rem;
-                        padding: 2rem;
-                        width: 6rem;
-                        height: 6rem;
-                    }
-                }
-            }
-        }
         &__item{
             &--circled{
                 margin-right: 2rem;
@@ -161,6 +140,34 @@ body{
                 }
                 &:last-child{
                     margin-right: 0;
+                }
+            }
+        }
+        &__list{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            &--right{
+                justify-content: flex-end;
+            }
+            &--medium{
+                .icons-box__item--circled{
+                    .icons-box__link{
+                        font-size: 2.5rem;
+                        padding: 2rem;
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+            &--black{
+                .icons-box{
+                    &__link{
+                        color: $color_black;
+                    }
                 }
             }
         }
@@ -219,7 +226,41 @@ body{
         padding-top: 0;
     }
 }
-
+.form{
+    border: 1px solid gold;
+    padding: 2rem;
+    &__group{
+        padding-top: 2rem;
+    }
+    &__control{
+        border-radius: 0;
+        border: 1px solid $color_grey_lightest;
+        border-bottom: 3px solid black;
+        @include ease-transition(.5s);
+        &:focus{
+            border: 1px solid gold;
+            border-bottom: 3px solid gold;
+            box-shadow: none;
+            @include ease-transition(.5s);
+        }
+    }
+    &__button{
+        width: 80%;
+        margin: 1rem 10%;
+        padding: 1rem;
+        border: 0;
+        border-bottom: 5px solid gold;
+        background: black;
+        color: white;
+        @include ease-transition(1s);
+        &:hover,
+        &:focus{
+            background: gold;
+            border-bottom: 5px solid transparent;
+            @include ease-transition(.5s);
+        }
+    }
+}
 .footer-bar{
     background: black;
     width: 100%;
