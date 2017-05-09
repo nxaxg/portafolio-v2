@@ -16,23 +16,28 @@
 </head>
 <body>
     <header>
-        <nav class="navbar-default navbar-fixed-top navbar">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Portafolio</a>
+                    <figure class="navbar-brand navbar-brand__figure">
+                        <a href="index.html">
+                            <img src="images/logo-white.png" alt="Logo NAG" class="navbar-brand__logo">
+                        </a>
+                    </figure>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbar__item">
                             <a href="about.html" class="navbar__link">About</a>
                         </li>
-                        <li class="navbar__item">
+                        <li class="navbar__item navbar__item--current">
                             <a href="services.html" class="navbar__link">Services</a>
                         </li>
                         <li class="navbar__item">
@@ -52,53 +57,45 @@
 
     <main class="main">
         <div class="container">
-            <h1 class="main__title font-centered">Services</h1>
+            <h1 class="main__title font-centered"><span class="main__title--line">Services</span></h1>
         </div>
     </main>
 
-    <section class="horizon horizon-halfden no-padding--bottom">
+    <section class="horizon no-padding--bottom">
         <div class="row">
             <div class="col-lg-6 hidden-xs no-padding--horizontal">
-                <figure class="horizon__figure horizon__figure--full">
-                    <img src="https://placehold.it/1000x600" alt="title" class="cover-img"/>
+                <figure class="horizon__figure horizon__figure--full horizon__figure--cult">
+                    <img src="images/servicios-front.jpeg" alt="title" class="cover-img"/>
                 </figure>
             </div>
             <div class="col-lg-6 col-xs-12">
                 <div class="horizon__body">
-                    <h3 class="horizon__title horizon__title--medium">Desarrollo Front-End</h3>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
+                    <h3 class="horizon__title horizon__title--midreg horizon__title--line">Desarrollo Front-End</h3>
+                    <div class="horizon__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nesciunt dolore quaerat sint maiores itaque labore recusandae quod minima aliquam, reiciendis! Id, numquam architecto expedita eaque tempore voluptatibus, consequuntur a.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis cumque eius provident nesciunt ipsam fugiat eveniet odio recusandae doloribus vel cum perspiciatis nulla, hic aliquam magnam, laborum quae repellendus?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor reprehenderit ratione tempora, aliquid harum deleniti similique. Inventore voluptatibus rem accusantium totam ratione, pariatur laudantium reprehenderit, dicta vitae distinctio magnam.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="horizon horizon-halfden no-padding--top">
+    <section class="horizon no-padding--vertical">
         <div class="row">
             <div class="col-lg-6 col-xs-12">
                 <div class="horizon__body">
-                    <h3 class="horizon__title horizon__title--medium">Desarrollo Back-End</h3>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
-                    <p class="horizon__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quibusdam beatae rerum, doloremque vel. Magni reprehenderit ea corrupti ratione culpa quia adipisci repudiandae quod consequatur ullam cum, ut enim! Quia.
-                    </p>
+                    <h3 class="horizon__title horizon__title--midreg horizon__title--line">Desarrollo Back-End</h3>
+                    <div class="horizon__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nesciunt dolore quaerat sint maiores itaque labore recusandae quod minima aliquam, reiciendis! Id, numquam architecto expedita eaque tempore voluptatibus, consequuntur a.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis cumque eius provident nesciunt ipsam fugiat eveniet odio recusandae doloribus vel cum perspiciatis nulla, hic aliquam magnam, laborum quae repellendus?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor reprehenderit ratione tempora, aliquid harum deleniti similique. Inventore voluptatibus rem accusantium totam ratione, pariatur laudantium reprehenderit, dicta vitae distinctio magnam.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 hidden-xs no-padding--horizontal">
-                <figure class="horizon__figure horizon__figure--full">
-                    <img src="https://placehold.it/1000x600" alt="title" class="cover-img"/>
+                <figure class="horizon__figure horizon__figure--full horizon__figure--cult">
+                    <img src="images/servicios-desarrollo.jpeg" alt="title" class="cover-img"/>
                 </figure>
             </div>
         </div>

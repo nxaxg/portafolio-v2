@@ -15,6 +15,7 @@ $base_title_font_family: 'Lato' !default;
 
 $base_content_font: 'Open Sans' !default;
 $base_title_font: 'Montserrat' !default;
+$base_other_font: 'Raleway' !default;
 
 $base_font_size: 16px !default;
 $base_line_height: 1.2em !default;
@@ -50,6 +51,24 @@ $text_sizes: (
 //Use
 //map-get($text_sizes, size);
 
+$spacing_min:		.25rem;		//4px
+$spacing_half:		.5rem;		//8px
+$spacing_ten:		.625rem;	//10px
+$spacing_short:		.75rem;		//12px	
+$spacing_regular: 	1rem; 		//16px
+$spacing_midtall: 	1.125rem;   //18px
+$spacing_midreg: 	1.25rem;   	//20px
+$spacing_avg: 	  	1.5rem;   	//24px
+$spacing_medium: 	1.75rem; 	//28px
+$spacing_double: 	2rem;		//32px
+$spacing_fourty: 	2.5rem; 	//40px
+$spacing_tall: 		3rem;		//48px
+$spacing_taller: 	3.5rem;		//56px
+$spacing_big: 		4.625rem; 	//74px
+$spacing_tenth: 	10rem;		//160px
+
+
+
 $headings_line_height: 1.5rem;
 $regular_line_height: $base_line_height;
 
@@ -63,6 +82,10 @@ $weight_medium: 500;
 $weight_semibold: 600;
 $weight_bold: 700;
 $weight_black: 900;
+
+//Project colors
+////////////////
+$color_gold:  #d6ac48 !default;
 
 
 ////////////////////////////////////////
@@ -205,6 +228,7 @@ $huge: 			90em !default;  // ~1440px
 $medias_map: (
 	extra-small: $extra_small,
 	small: $small,
+	tablet: $tablet,
 	medium: $medium,
 	large: $large,
 	extra-large: $extra_large,
@@ -230,6 +254,48 @@ $medias_map: (
 	display: flex;
     justify-content: center;
 	align-items: center;
+}
+
+@mixin overlay-color($color, $alpha, $transition){
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color, $alpha);
+    cursor: pointer;
+    @include ease-transition($transition);
+}
+
+@mixin overlay($color, $alpha, $transition){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color, $alpha);
+    cursor: pointer;
+    @include ease-transition($transition);
+}
+
+@mixin grayscale($percentage){
+	-webkit-filter: grayscale($percentage);
+	-ms-filter: grayscale($percentage);
+	-moz-filter: grayscale($percentage);
+	filter: grayscale($percentage);
+}
+
+@mixin zoom($howmuch){
+	-webkit-transfrom: scale($howmuch);
+	-ms-transfrom: scale($howmuch);
+	-moz-transfrom: scale($howmuch);
+	transform: scale($howmuch)
+}
+
+@mixin flex-column{
+	@include flex-center;
+	flex-direction: column;
 }
 
 

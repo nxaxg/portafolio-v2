@@ -32,7 +32,7 @@
 	}
 	&__circled{
 		border-radius: 50%;
-		border: 1px solid $color_main_regular;
+		border: 1px solid $color_gold;
 		overflow: hidden;
 		img{
 			width: 100%;
@@ -92,6 +92,13 @@
 	max-width: 100%;
 	margin: 0;
 	padding: 0;
+	&--flex{
+		display: flex;
+		align-items: center;
+	}
+	&--padd{
+		padding: 2rem 0;
+	}
 }
 
 .list-inline{

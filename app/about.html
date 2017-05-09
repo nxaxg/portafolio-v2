@@ -16,20 +16,25 @@
 </head>
 <body>
     <header>
-        <nav class="navbar-default navbar-fixed-top navbar">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Portafolio</a>
+                    <figure class="navbar-brand navbar-brand__figure">
+                        <a href="index.html">
+                            <img src="images/logo-white.png" alt="Logo NAG" class="navbar-brand__logo">
+                        </a>
+                    </figure>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar__item">
+                        <li class="navbar__item navbar__item--current">
                             <a href="about.html" class="navbar__link">About</a>
                         </li>
                         <li class="navbar__item">
@@ -52,12 +57,12 @@
 
     <main class="main">
         <div class="container">
-            <h1 class="main__title font-centered">About</h1>
-            <div class="main__body">
-                <div class="row">
+            <h1 class="main__title font-centered"><span class="main__title--line">About</span></h1>
+            <div class="main__body main__body--btm">
+                <div class="row row--flex">
                     <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1">
                         <figure class="main__figure figure__circled">
-                            <img src="https://placehold.it/50x50" alt=""/>
+                            <img src="images/selfie.png" alt=""/>
                         </figure>
                     </div>
                     <div class="col-md-7 col-md-offset-2 col-sm-12 col-sm-offset-0">
@@ -73,37 +78,43 @@
     <section class="horizon horizon--black">
         <!--<div class="wrap"><img src="images/about-proceso.jpeg" alt="" class="wrap__image"/></div>-->
         <div class="container">
-            <h2 class="horizon__title font-centered">Proceso creativo</h2>
-            <div class="row">
+            <h2 class="horizon__title font-centered"><span class="horizon__title--line">Proceso creativo</span></h2>
+            <div class="row row--padd">
                 <!--proceso 1-->
                 <div class="col-lg-4 col-sm-12">
-                    <figure class="figure--centered horizon__figure">
-                        <img src="https://placehold.it/100x100" class="elastic-img" alt=""/>
-                    </figure>
-                    <h3 class="horizon__subtitle">Diseño</h3>
-                    <div class="horizon__body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                    </div>
+                    <article class="horizon-box horizon-box--vertical">
+                        <figure class="horizon-box__figure">
+                            <img src="images/icon-analisis.png" class="horizon-box__img--min" alt=""/>
+                        </figure>
+                        <h3 class="horizon-box__subtitle">Análisis</h3>
+                        <div class="horizon-box__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                        </div>
+                    </article>
                 </div>
                 <!--proceso 2-->
                 <div class="col-lg-4 col-sm-12">
-                    <figure class="figure--centered horizon__figure">
-                        <img src="https://placehold.it/100x100" class="elastic-img" alt=""/>
-                    </figure>
-                    <h3 class="horizon__subtitle">Diseño</h3>
-                    <div class="horizon__body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                    </div>
+                    <article class="horizon-box horizon-box--vertical">
+                        <figure class="horizon-box__figure">
+                            <img src="images/icon-diseno.png" class="horizon-box__img--min" alt=""/>
+                        </figure>
+                        <h3 class="horizon-box__subtitle">Diseño</h3>
+                        <div class="horizon-box__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                        </div>
+                    </article>
                 </div>
                 <!--proceso 3-->
                 <div class="col-lg-4 col-sm-12">
-                    <figure class="figure--centered horizon__figure">
-                        <img src="https://placehold.it/100x100" class="elastic-img" alt=""/>
-                    </figure>
-                    <h3 class="horizon__subtitle">Diseño</h3>
-                    <div class="horizon__body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                    </div>
+                    <article class="horizon-box horizon-box--vertical">
+                        <figure class="horizon-box__figure">
+                            <img src="images/icon-code.png" class="horizon-box__img--min" alt=""/>
+                        </figure>
+                        <h3 class="horizon-box__subtitle">Desarrollo</h3>
+                        <div class="horizon-box__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
