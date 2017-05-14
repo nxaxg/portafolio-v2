@@ -4,6 +4,21 @@ body{
     font-family: $base_content_font;
     font-size: 16px;
 }
+*::selection{
+    background: rgba($color_black, .8);
+    color: $color_gold;
+}
+a{
+    color: $color_gold;
+    text-decoration: none;
+    @include ease-transition(.5s);
+    &:hover{
+        color: $color_gold;
+        text-decoration: line-through;
+        @include ease-transition(.5s);
+    }
+}
+
 .container{
     @include media (tablet-up){
         padding: 0;
@@ -40,7 +55,7 @@ body{
         }
         &__body{
             width: 100%;
-            padding: 5% 0;
+            padding: 2rem 0;
         }
     }
     &__body{
@@ -196,6 +211,12 @@ body{
         &--line{
             background: $color_gold;
         }
+        &--inverted{
+            color: $color_white;
+        }
+        &--reel{
+            border-bottom: 2px solid $color_gold;
+        }
     }
     &-home{
         &__body{
@@ -311,13 +332,13 @@ body{
                     padding: 1rem;
                     width: 4rem;
                     height: 4rem;
-                    border: 1px solid gold;
+                    border: 1px solid $color_gold;
                     border-radius: 50%;
                     @include flex-center;
                     @include ease-transition(.2s);
                     &:hover{
                         text-decoration: none;
-                        color: gold;
+                        color: $color_gold;
                         border: 1px solid transparent;
                         @include scale-transform(1.4);
                         @include ease-transition(.5s);
@@ -366,7 +387,6 @@ body{
 }
 
 .archive-box{
-    border: 1px solid black;
     position: relative;
     &__figure{
         width: 100%;
@@ -383,14 +403,20 @@ body{
     &__title{
         font-family: $base_title_font;
         font-weight: $weight_bold;
-        font-size: map-get($text_sizes, bigger);
+        font-size: map-get($text_sizes, tall);
         text-transform: uppercase;
         color: $color_white;
         &--line{
             border-bottom: 2px solid $color_gold;
         }
     }
+    .button{
+        margin-top: 2.5rem;
+    }
     &:hover{
+        .archive-box__body{
+            @include overlay($color_black, .7, 1s);
+        }
         .archive-box__img{
             @include grayscale(100%);
             @include ease-transition(2s);
@@ -439,13 +465,13 @@ body{
     &__link{
         color: white;
         padding: .5rem 1rem;
-        border: 1px solid gold;
+        border: 1px solid $color_gold;
         @include flex-center;
         @include ease-transition(.2s);
         &:hover{
             border: 1px solid transparent;
             text-decoration: none;
-            color: gold;
+            color: $color_gold;
             @include ease-transition(.5s);
         }
         &:active,
@@ -460,20 +486,20 @@ body{
 .project{
     &-sidebar{
         padding: 1rem;
-        border: 1px solid gold;
+        border: 1px solid $color_gold;
         &__title{
             margin: 0;
             padding: 1rem 0;
         }
     }
     &-content{
-        border: 1px solid gold;
+        border: 1px solid $color_gold;
         padding: 1rem 2rem;
         padding-top: 0;
     }
 }
 .form{
-    border: 1px solid gold;
+    border: 1px solid $color_gold;
     padding: 2rem;
     &__group{
         padding-top: 2rem;
@@ -484,8 +510,8 @@ body{
         border-bottom: 3px solid black;
         @include ease-transition(.5s);
         &:focus{
-            border: 1px solid gold;
-            border-bottom: 3px solid gold;
+            border: 1px solid $color_gold;
+            border-bottom: 3px solid $color_gold;
             box-shadow: none;
             @include ease-transition(.5s);
         }
@@ -495,13 +521,13 @@ body{
         margin: 1rem 10%;
         padding: 1rem;
         border: 0;
-        border-bottom: 5px solid gold;
+        border-bottom: 5px solid $color_gold;
         background: black;
         color: white;
         @include ease-transition(1s);
         &:hover,
         &:focus{
-            background: gold;
+            background: $color_gold;
             border-bottom: 5px solid transparent;
             @include ease-transition(.5s);
         }
@@ -511,7 +537,7 @@ body{
     background: black;
     width: 100%;
     padding: 1rem;
-    color: white;
+    color: $color_white;
     z-index: 10;
     .row{
         display: flex;
