@@ -54,12 +54,11 @@
         </nav>
     </header>
 
-    <main class="overlay overlay-project">
-        <figure class="overlay-project__back">
-            <img src="images/project-cajon.jpeg" alt="title" class="cover-img"/>
+    <main id="main" class="overlay overlay-project">
+        <figure class="overlay-project__back" style="background-image: url('images/project-iceland.jpg')">
         </figure>
         <div class="overlay__body overlay-project__body font-centered">
-            <h1 class="main__title font-centered"><span class="main__title--line">Nombre del proyecto</span></h1>
+            <h1 class="main__title main__title--inverted font-centered"><span class="main__title--line">Nombre del proyecto</span></h1>
             <div class="icons-box font-centered">
                 <ul class="icons-box__list icons-box__list--medium">
                     <li class="icons-box__item icons-box__item--circled">
@@ -73,7 +72,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tags-box font-centered">
+            <div class="tags-box font-centered hidden-xs">
                 <ul class="tags-box__list">
                     <li class="tags-box__item">
                         <a href="#" class="tags-box__link">HTML5</a>
@@ -98,26 +97,41 @@
     <section class="horizon">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 hidden-xs no-padding--left">
+                <div class="col-lg-3 col-xs-12 no-padding--left no-padding--mobile col__kicker_half--mobile">
                     <aside class="project-sidebar">
                         <h3 class="project-sidebar__title">Data:</h3>
-                        <p class="project-sidebar__data">
-                            <span class="fa fa-calendar icons-gold"></span> <strong>Fecha: </strong>
-                            Noviembre 27, 2016
-                        </p>
-                        <p class="project-sidebar__data">
-                            <span class="fa fa-vcard-o icons-gold"></span> <strong>Asignatura: </strong>
-                            Maquetación
-                        </p>
-                        <p class="project-sidebar__data">
-                            <span class="fa fa-user-secret icons-gold"></span> <strong>Cliente: </strong>
-                            Cajón del maipo
-                        </p>
+                        <dl class="project-sidebar__list">
+                            <dt class="project-sidebar__icon">
+                                <span class="fa fa-calendar icons-gold"></span>
+                                Fecha:
+                            </dt>
+                            <dd class="project-sidebar__data">
+                                Noviembre 27, 2016
+                            </dd>
+                            <dt class="project-sidebar__icon">
+                                <span class="fa fa-vcard-o icons-gold"></span>
+                                Asignatura:
+                            </dt>
+                            <dd class="project-sidebar__data">
+                                Maquetación
+                            </dd>
+                            <dt class="project-sidebar__icon">
+                                <span class="fa fa-user-secret icons-gold"></span>
+                                Cliente:
+                            </dt>
+                            <dd class="project-sidebar__data">
+                                Cajón del maipo
+                            </dd>
+                        </dl>
                     </aside>
+                    <a href="portfolio.html" class="button button--goback hidden-xs">
+                        <span class="fa fa-arrow-left"></span>
+                        <span class="font-righted">Ir a Proyectos</span>
+                    </a>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-xs-12 col-xs--no-padding">
                     <div class="project-content">
-                        <h2 class="main__title--medium">Descripción:</h2>
+                        <h3 class="main__title--medium">Descripción:</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reprehenderit id at amet eum possimus beatae itaque, adipisci non iste saepe asperiores maiores iure facere rem ipsam perferendis quia vitae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis cumque, atque earum, eligendi tenetur architecto. Deserunt doloribus sequi harum illo corporis, iste laborum laudantium atque nihil possimus hic quod distinctio.
                         </p>
@@ -126,6 +140,12 @@
                         </p>
                     </div>
                 </div>
+                <div class="col-lg-3 col-xs-12 col-xs--no-padding hidden-lg hidden-md hidden-sm">
+                    <a href="portfolio.html" class="button button--goback">
+                        <span class="fa fa-arrow-left"></span>
+                        <span class="font-righted">Ir a Proyectos</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -133,12 +153,12 @@
     <footer class="footer-bar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 no-padding--right">
+                <div class="col-lg-3 hidden-sm hidden-xs no-padding--right">
                     <p class="footer-bar__copyright">
                         &copy;Copyright <a href="#" class="common__link">NAG</a> 2017
                     </p>
                 </div>
-                <div class="col-lg-6 font-centered">
+                <div class="col-lg-6 col-sm-9 col-xs-10 font-centered lefted--tablet">
                     <ul class="icons-box__list">
                         <li class="icons-box__item icons-box__item--circled">
                             <a href="#" class="icons-box__link fa fa-github"></a>
@@ -151,10 +171,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 font-righted">
+                <div class="col-lg-3 col-sm-3 col-xs-2 font-righted">
                     <ul class="icons-box__list icons-box__list--right">
                         <li class="icons-box__item icons-box__item--circled">
-                            <a href="#" class="icons-box__link fa fa-angle-up"></a>
+                            <a href="#main" class="icons-box__link fa fa-angle-up"></a>
                         </li>
                     </ul>
                 </div>
@@ -163,5 +183,6 @@
     </footer>
     <script src="scripts/libs/jquery-1.11.3.js"></script>
     <script src="scripts/libs/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

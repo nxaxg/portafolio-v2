@@ -52,7 +52,19 @@
 .font-italic { font-style: italic; }
 
 // font alignments
-.font-centered { text-align: center; }
+.font-centered {
+	text-align: center;
+	&.lefted{
+		&--tablet{
+			@include media (large-down){
+				text-align: left;
+				.icons-box__list{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}
 .font-lefted { text-align: left; }
 .font-righted { text-align: right; }
 
@@ -95,9 +107,20 @@
 	&--flex{
 		display: flex;
 		align-items: center;
+		@include media (large-down){
+			display: inherit;
+		}
 	}
 	&--padd{
 		padding: 2rem 0;
+	}
+}
+
+.col-xs{
+	&--no-padding{
+		@include media (tablet-down){
+			padding: 0;
+		}
 	}
 }
 
@@ -125,6 +148,11 @@ textarea{
 }
 .no-padding{
 	padding: 0 !important;
+	&--mobile{
+		@include media (tablet-down){
+			padding: 0 !important;
+		}
+	}
 }
 .no-padding--top,
 .no-padding--vertical{

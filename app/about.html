@@ -8,7 +8,7 @@
     <meta name="keywords" content="portfolio, diseño, desarrollo, web, proyectos, portafolio, projects, diseño web, desarrollo web">
     <meta name="robots" content="all">
     <!--favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -28,7 +28,7 @@
                     </button>
                     <figure class="navbar-brand navbar-brand__figure">
                         <a href="index.html">
-                            <img src="images/logo-white.png" alt="Logo NAG" class="navbar-brand__logo">
+                            <img src="images/logo--white.svg" alt="Logo NAG" class="navbar-brand__logo">
                         </a>
                     </figure>
                 </div>
@@ -55,17 +55,17 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main id="main" class="main">
         <div class="container">
             <h1 class="main__title font-centered"><span class="main__title--line">About</span></h1>
             <div class="main__body main__body--btm">
                 <div class="row row--flex">
-                    <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                    <div class="col-md-4 col-md-offset-0 col-xs-10 col-xs-offset-1 col__kicker--mobile">
                         <figure class="main__figure figure__circled">
                             <img src="images/selfie.png" alt=""/>
                         </figure>
                     </div>
-                    <div class="col-md-7 col-md-offset-2 col-sm-12 col-sm-offset-0">
+                    <div class="col-md-7 col-md-offset-1 col-sm-12 col-xs-12 col-xs--no-padding">
                         <div class="main__content main__content--bordered">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat animi nisi sapiente optio tenetur dolorem, fuga, vitae porro reiciendis delectus natus quis eius laborum impedit. Explicabo necessitatibus repellendus, soluta sit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, totam fuga voluptatem cumque, deserunt dolorum temporibus qui, repellendus nesciunt architecto ducimus ad sequi nostrum dolor, voluptate libero. Maiores excepturi, vel.</p>
                         </div>
@@ -75,46 +75,48 @@
         </div>
     </main>
 
-    <section class="horizon horizon--black">
-        <!--<div class="wrap"><img src="images/about-proceso.jpeg" alt="" class="wrap__image"/></div>-->
-        <div class="container">
-            <h2 class="horizon__title font-centered"><span class="horizon__title--line">Proceso creativo</span></h2>
-            <div class="row row--padd">
-                <!--proceso 1-->
-                <div class="col-lg-4 col-sm-12">
-                    <article class="horizon-box horizon-box--vertical">
-                        <figure class="horizon-box__figure">
-                            <img src="images/icon-analisis.png" class="horizon-box__img--min" alt=""/>
-                        </figure>
-                        <h3 class="horizon-box__subtitle">Análisis</h3>
-                        <div class="horizon-box__body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                        </div>
-                    </article>
-                </div>
-                <!--proceso 2-->
-                <div class="col-lg-4 col-sm-12">
-                    <article class="horizon-box horizon-box--vertical">
-                        <figure class="horizon-box__figure">
-                            <img src="images/icon-diseno.png" class="horizon-box__img--min" alt=""/>
-                        </figure>
-                        <h3 class="horizon-box__subtitle">Diseño</h3>
-                        <div class="horizon-box__body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                        </div>
-                    </article>
-                </div>
-                <!--proceso 3-->
-                <div class="col-lg-4 col-sm-12">
-                    <article class="horizon-box horizon-box--vertical">
-                        <figure class="horizon-box__figure">
-                            <img src="images/icon-code.png" class="horizon-box__img--min" alt=""/>
-                        </figure>
-                        <h3 class="horizon-box__subtitle">Desarrollo</h3>
-                        <div class="horizon-box__body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
-                        </div>
-                    </article>
+    <section class="horizon no-padding wrap--horizon">
+        <div class="wrap--back"  style="background-image:url('images/about-proceso.jpeg')"></div>
+        <div class="wrap--container">
+            <div class="container">
+                <h2 class="horizon__title font-centered"><span class="horizon__title--line">Proceso creativo</span></h2>
+                <div class="row row--padd">
+                    <!--proceso 1-->
+                    <div class="col-lg-4 col-sm-12">
+                        <article class="horizon-box horizon-box--vertical">
+                            <figure class="horizon-box__figure hidden-sm">
+                                <img src="images/icon-analisis.png" class="horizon-box__img--min" alt=""/>
+                            </figure>
+                            <h3 class="horizon-box__subtitle">Análisis</h3>
+                            <div class="horizon-box__body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!--proceso 2-->
+                    <div class="col-lg-4 col-sm-12">
+                        <article class="horizon-box horizon-box--vertical">
+                            <figure class="horizon-box__figure hidden-sm">
+                                <img src="images/icon-diseno.png" class="horizon-box__img--min" alt=""/>
+                            </figure>
+                            <h3 class="horizon-box__subtitle">Diseño</h3>
+                            <div class="horizon-box__body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!--proceso 3-->
+                    <div class="col-lg-4 col-sm-12">
+                        <article class="horizon-box horizon-box--vertical">
+                            <figure class="horizon-box__figure hidden-sm">
+                                <img src="images/icon-code.png" class="horizon-box__img--min" alt=""/>
+                            </figure>
+                            <h3 class="horizon-box__subtitle">Desarrollo</h3>
+                            <div class="horizon-box__body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque earum ducimus commodi numquam fugiat nostrum culpa, deleniti ad beatae praesentium deserunt, qui reiciendis provident nam. Ullam ea, ratione vero nihil?</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,16 +126,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-xs-12">
-                    <h3 class="horizon__subtitle font-centered">Lenguajes</h3>
-                    <img src="https://placehold.it/300x400" alt="title" class="cover-img"/>
+                    <h3 class="horizon-box__subtitle horizon-box__subtitle--black font-centered"><span class="horizon__title--line">Lenguajes</span></h3>
+                    <img src="https://placehold.it/300x350" alt="title" class="cover-img"/>
                 </div>
                 <div class="col-lg-4 col-xs-12">
-                    <h3 class="horizon__subtitle font-centered">Lenguajes</h3>
-                    <img src="https://placehold.it/300x400" alt="title" class="cover-img"/>
+                    <h3 class="horizon-box__subtitle horizon-box__subtitle--black font-centered"><span class="horizon__title--line">Frameworks</span></h3>
+                    <img src="https://placehold.it/300x350" alt="title" class="cover-img"/>
                 </div>
                 <div class="col-lg-4 col-xs-12">
-                    <h3 class="horizon__subtitle font-centered">Lenguajes</h3>
-                    <img src="https://placehold.it/300x400" alt="title" class="cover-img"/>
+                    <h3 class="horizon-box__subtitle horizon-box__subtitle--black font-centered"><span class="horizon__title--line">Software</span></h3>
+                    <img src="https://placehold.it/300x350" alt="title" class="cover-img"/>
                 </div>
             </div>
         </div>
@@ -142,12 +144,12 @@
     <footer class="footer-bar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 no-padding--right">
+                <div class="col-lg-3 hidden-sm hidden-xs no-padding--right">
                     <p class="footer-bar__copyright">
                         &copy;Copyright <a href="#" class="common__link">NAG</a> 2017
                     </p>
                 </div>
-                <div class="col-lg-6 font-centered">
+                <div class="col-lg-6 col-sm-9 col-xs-10 font-centered lefted--tablet">
                     <ul class="icons-box__list">
                         <li class="icons-box__item icons-box__item--circled">
                             <a href="#" class="icons-box__link fa fa-github"></a>
@@ -160,10 +162,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 font-righted">
+                <div class="col-lg-3 col-sm-3 col-xs-2 font-righted">
                     <ul class="icons-box__list icons-box__list--right">
                         <li class="icons-box__item icons-box__item--circled">
-                            <a href="#" class="icons-box__link fa fa-angle-up"></a>
+                            <a href="#main" class="icons-box__link fa fa-angle-up"></a>
                         </li>
                     </ul>
                 </div>
@@ -172,5 +174,6 @@
     </footer>
     <script src="scripts/libs/jquery-1.11.3.js"></script>
     <script src="scripts/libs/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
